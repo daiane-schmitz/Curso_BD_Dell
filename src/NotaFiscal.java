@@ -67,5 +67,9 @@ public class NotaFiscal {
                 '}';
     }
 
-
+    public String resumo() {
+        return toString() +
+                "\n" + itens.toString() +
+                "\n";
+    }
 }

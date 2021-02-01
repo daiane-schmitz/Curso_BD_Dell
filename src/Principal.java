@@ -42,6 +42,7 @@ public class Principal {
         itemNotaFiscal2.setQuantidade(20);
         itemNotaFiscal2.setProduto(arroz);
 
+
         }
 
 
