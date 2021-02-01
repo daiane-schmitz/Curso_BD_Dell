@@ -7,7 +7,7 @@ public class NotaFiscal {
     private int codigo;
     private Date data;
     private Cliente cliente;
-    private List<ItemNotaFiscal> itens = new ArrayList<ItemNotaFiscal>();
+    private List<ItemNotaFiscal> itens = new ArrayList<>();
     private float valor;
 
     public NotaFiscal() {
@@ -55,8 +55,8 @@ public class NotaFiscal {
        return valor = (itemNotaFiscal.getQuantidade()* produto.getValor());
     }
 
-    public void inserirItem(ItemNotaFiscal itemNotaFiscal){
-        itens.add(itemNotaFiscal);
+    public void inserirItem(List<ItemNotaFiscal> itemNotaFiscal){
+        itemNotaFiscal.add(itemNotaFiscal.get(1));
     }
 
     @Override
@@ -70,6 +70,8 @@ public class NotaFiscal {
     public String resumo() {
         return toString() +
                 "\n" + itens.toString() +
-                "\n";
-    }
+                "\n Valor da Nota Fiscal: " + valor;
+                }
+
+
 }
